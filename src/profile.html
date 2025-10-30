@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Profile page - SocialBook - Practica</title>
+    <script src="https://kit.fontawesome.com/c5e7699a12.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <nav>
+        <div class="nav-left">
+            <a href="index.html">
+            <img src="images/logoV1.png" class="logo" alt="logo">
+            </a>
+            <ul>
+                <li><img src="images/notification.png" alt=""></li>
+                <li><img src="images/inbox.png" alt=""></li>
+                <li><img src="images/video.png" alt=""></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-box">
+                <img src="images/search.png" alt="">
+                <input type="text" placeholder="Buscar...">
+            </div>
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+                <img src="images/ProfilePic.png" alt="">
+            </div>
+        </div>
+<!-- Setting Menu (hidden by default) -->
+        <div class="setting-menu">
+
+            <div id="dark-btn" onclick="darkMode()">
+                <span></span>
+            </div>
+
+            <div class="setting-menu-inner">
+                <div class="user-profile">
+                    <img src="images/ProfilePic.png">
+                    <div>
+                        <p>Cesar Bastidas</p>
+                        <a href="profile.html">Ver mi perfil</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="user-profile">
+                    <img src="images/feedback.png">
+                    <div>
+                        <p>Danos Feedback</p>
+                        <a href="#">Ayudanos a mejorar el diseño</a>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="settings-links">
+                    <img src="images/setting.png" class="settings-icon">
+                    <a href="#">Seguridad & Privacidad  <img src="images/arrow.png" width="10px"></a>
+                </div>
+                <div class="settings-links">
+                    <img src="images/help.png" class="settings-icon">
+                    <a href="#">Ayuda & Soporte <img src="images/arrow.png" width="10px"></a>
+                </div>
+                <div class="settings-links">
+                    <img src="images/display.png" class="settings-icon">
+                    <a href="#">Display & Accesibilidad <img src="images/arrow.png" width="10px"></a>
+                </div>
+                <div class="settings-links">
+                    <img src="images/logout.png" class="settings-icon">
+                    <a href="#">Cerrar Sesion<img src="images/arrow.png" width="10px"></a>
+                </div>
+        </div>
+
+    </nav>
+
+    <!-- Profile Container -->
+    <div class="profile-container"> 
+        <img src="images/cover.png" class="cover-img">
+        <div class="profile-details">
+            <div class="pd-left">
+                <div class="pd-row">
+                    <img src="images/ProfilePic.png" class="pd-image">
+                    <div class="">
+                        <h3>Cesar Bastidas</h3>
+                        <p>421 Amigos - 4 En común</p>
+                        <img src="images/jpg-red/Anakin/AnakinPerfil.png">
+                        <img src="images/jpg-red/Michael/MichPerfilv1.png">
+                        <img src="images/jpg-red/Tony S/TonyPerfil.png">
+                        <img src="images/jpg-red/Marty/McflyPerfil.png">
+                    </div>
+                </div>
+            </div>
+            <div class="pd-right">
+
+                <button type="button"><img src="images/add-friends.png"> Amigos</button>
+                <button type="button"><img src="images/message.png"> Mensajes</button>
+                <br>
+                <a href="#"><img src="images/more.png"></a>
+
+            </div>
+        </div>
+
+        <div class="profile-info">
+            <div class="info-col">
+                <div class="profile-intro">
+                    <h3>Intro</h3>
+                    <p class="intro-text">A dev from nowhere with the dream of reaching everywhere 
+                        <img src="images/feeling.png"></p>
+                    <hr>
+                    <ul>
+                        <li><img src="images/profile-job.png"> Tester en Upwork</li>
+                        <li><img src="images/profile-study.png"> Estudiante autodidacta en Udemy</li>
+                        <li><img src="images/profile-study.png"> Fui a la UNERG, Venezuela</li>
+                        <li><img src="images/profile-location.png"> Vive en Buenos Aires, Argentina</li>  
+                    </ul>
+                </div>
+
+                <div class="profile-intro">
+                    <div class="title-box">
+                        <h3>Fotos</h3>
+                        <a href="#">Ver todas las fotos</a>
+                    </div>
+                    <div class="photo-box">
+                        <div><img src="images/thumbNails/Photos2.png"></div>
+                        <div><img src="images/thumbNails/Photos3.png"></div>
+                        <div><img src="images/thumbNails/Photos4.png"></div>
+                        <div><img src="images/thumbNails/Photos5.png"></div>
+                        <div><img src="images/thumbNails/Photos6.png"></div>
+                        <div><img src="images/thumbNails/thumbPNG1.png"></div>
+                    </div>
+                </div>
+
+                <div class="profile-intro">
+                    <div class="title-box">
+                        <h3>Amigos</h3>
+                        <a href="#">Ver todos los amigos</a>
+                    </div>
+                    <p>421 (3 en común)</p>
+                    <div class="friends-box">
+                        <div><img src="images/jpg-red/Anakin/AnakinPerfil.png"> <p>Anakin S</p></div>
+                        <div><img src="images/jpg-red/Michael/MichPerfilv1.png"> <p>Michael S</p></div>
+                        <div><img src="images/jpg-red/Padme/PadmPerfil.png"> <p>Padmé A</p></div>
+                        <div><img src="images/jpg-red/Emmet/EmmPerfil.png"> <p>Emmett B</p></div>
+                        <div><img src="images/jpg-red/Tony S/TonyPerfil.png"> <p>Tony S</p></div>
+                        <div><img src="images/jpg-red/Jim/jimhalpert_1.jpg"> <p>Jim H</p></div>
+                        <div><img src="images/jpg-red/Pam B/PamPerfil.png"> <p>Pam B</p></div>
+                        <div><img src="images/jpg-red/Marty/McflyPerfil.png"> <p>Marty M</p></div>
+                        <div><img src="images/jpg-red/Happy H/HappPerfil.png"> <p>Happy H</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-col">
+                <div class="write-post-container">
+                <div class="user-profile">
+                    <img src="images/ProfilePic.png">
+                    <div>
+                        <p>Cesar Bastidas</p>
+                        <small>Publico <i class="fa-solid fa-caret-down"></i></small>
+                    </div>
+                </div>
+                <div class="post-input-container">
+                    <textarea rows="3" placeholder="¿Qué estás pensando, Cesar?"></textarea>
+                    <div class="add-post-links">
+                        <a href="#"><img src="images/live-video.png"> Video en vivo</a>
+                        <a href="#"><img src="images/photo.png"> Foto/video</a>
+                        <a href="#"><img src="images/feeling.png"> Sentimiento/actividad</a> 
+                    </div>
+                </div>
+            </div>
+             <!-- Post 1-->
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                    <img src="images/ProfilePic.png">
+                        <div>
+                       <p> <a href="profile.html" class="toProfile">Cesar Bastidas</a></p>
+                        <span>Octubre 23 2025, 20:25</span>
+                        </div>
+                    </div>
+                    <a href=""><i class="fa-solid fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">
+                    <span>¡Mi landing de e-commerce para zapatería ya está lista!</span>
+                    <br>
+                    Después de practicar con páginas simples, quise <span>imitar una tienda real:</span> un e-commerce visual hecho 
+                    solo con <span>HTML, CSS y JavaScript puro.</span>  
+                    <br><br>
+                    Lo que <span>sí</span> tiene (y me costó sudor):<br>
+                    - Menú responsive con marcas reales<br>
+                    - Galería de productos con <span>hover effects suaves</span><br>
+                    - <span>Modal interactivo</span> al hacer clic en "Comprar" (con imagen, precio, tallas) <br>
+                    - Totalmente responsive (¡pruébalo en móvil!)<br>
+                    <br>
+                    Lo que <span>aún no</span> tiene: <br>
+                    Carrito, acumular productos, eliminar… <br>
+                    <span>Pero es un primer paso para proyectos más grandes.</span>
+                    <br><br>
+                    ¿Te animas a echarle un vistazo y darme tu feedback?
+                    <br>
+                    <a href="https://shoes-ecommerce-self.vercel.app">🔗[Ver tienda en vivo]</a><br>
+                    <a href="#">#FrontEnd</a> <a href="#">#Ecommerce</a> <a href="#">#JavaScript</a> <a href="#">#HTML</a> 
+                    <a href="#">#CSS</a> <a href="#">#Trainee</a> <a href="#">#AprendiendoEnPúblico</a>
+                </p>
+                <img src="images/post/postPic5.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like-blue.png" alt="">120</div>
+                        <div><img src="images/comments.png" alt="">45</div>
+                        <div><img src="images/share.png" alt="">20</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/ProfilePic.png"> <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 2 -->
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                    <img src="images/ProfilePic.png">
+                        <div>
+                        <p><a href="profile.html" class="toProfile">Cesar Bastidas</a></p>
+                        <span>Septiembre 27 2025, 09:12</span>
+                        </div>
+                    </div>
+                    <a href=""><i class="fa-solid fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text"> <span>¡Mi primera tanda de web apps con JavaScript ya está aquí!</span>
+                <br><br>      
+                Después de entender HTML/CSS, llegó el momento de <span>darle vida</span> a las páginas. Y sí, 
+                <span>empecé con tres clásicos</span> (porque ¿quién no quiere un reproductor, una to-do y un clima?). 
+                <br><br>
+                <span>- Music Player:</span> play, pausa, barra de progreso… todo con JS puro.  
+                <br>
+                <span>- To-Do List:</span> agrega, marca, elimina. ¡Persiste en localStorage!
+                <br>
+                <span>- Weather App:</span> consume una API real y muestra el clima de tu ciudad.  
+                <br><br>
+                No son perfectas, hay bugs, hay `console.log` olvidados…
+                <br>
+                Pero funcionan. Y las hice yo haciendolas a mano desde cero.
+                <br><br> 
+                ¿Eres reclutador y buscas a alguien que <span>aprende haciendo?</span><br>
+                ¿Desarrollador que recuerda su primer `addEventListener`?<br>
+                <span>¡Prueba las apps, rompe algo y dime qué mejorar!</span>
+                <br><br>
+                <a href="https://music-app-v1-one.vercel.app">🎶[Music Player]</a> 
+                <br>
+                <a href="https://to-do-list-omega-one-10.vercel.app">📃[To-Do List]</a>
+                <br>
+                <a href="https://clima-test-inky.vercel.app">⛅[Weather App]</a>
+                <br>
+                <a href="#">#JavaScript</a> <a href="#">#WebApp</a> <a href="#">#FrontEnd</a> <a href="#">#Trainee</a> 
+                <a href="#">#API</a> <a href="#">#LocalStorage</a> <a href="#">#AprendiendoEnPúblico</a> 
+                </p>
+                <img src="images/post/postPic4.png" class="post-img">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like.png" alt="">120</div>
+                        <div><img src="images/comments.png" alt="">45</div>
+                        <div><img src="images/share.png" alt="">20</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/ProfilePic.png"> <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 3 -->
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                    <img src="images/ProfilePic.png">
+                        <div>
+                        <p><a href="profile.html" class="toProfile">Cesar Bastidas</a></p>
+                        <span>Septiembre 13 2025, 12:11</span>
+                        </div>
+                    </div>
+                    <a href=""><i class="fa-solid fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">
+                    <span>¡Primera landing 100% HTML + CSS!</span>
+                    <br><br>
+                    Sin frameworks. Con errores. Pero funciona. <span>(Y es responsive! 📱)</span>
+                    <br><br> 
+                    ¿Me das tu opinión honesta?
+                    <br>  
+                    <a href="https://landing-test-one-liart.vercel.app">🔗[Ver aquí]</a>
+                    <br>  
+                    <a href="#">#FrontEnd</a> <a href="#">#LandingPage</a> <a href="#">#Trainee</a>
+                </p>
+                <img src="images/post/postPic3.png" class="post-img">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like.png" alt="">120</div>
+                        <div><img src="images/comments.png" alt="">45</div>
+                        <div><img src="images/share.png" alt="">20</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/ProfilePic.png"> <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 4 -->
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                    <img src="images/ProfilePic.png">
+                        <div>
+                        <p><a href="profile.html" class="toProfile">Cesar Bastidas</a></p>
+                        <span>Agosto 30 2025, 21:07</span>
+                        </div>
+                    </div>
+                    <a href=""><i class="fa-solid fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">
+                    <span>🌅  Aprender algo nuevo cada día…</span>
+                    <br><br>
+                    Después de horas frente a la pantalla debugueando CSS, resolviendo bugs en JS y preguntándome por qué <span>flexbox</span> me 
+                    odia, <span>salgo un momento a respirar.</span>
+                    <br><br>  
+                    Y ahí está: un atardecer que me recuerda que <span>el progreso no solo pasa en el código.</span>  
+                    A veces, el mejor “commit” del día es parar, mirar al cielo, recargar y dar gracias.
+                    <br><br>  
+                    Y luego seguir con café y errores 404 😅
+                    <span>¡Cuéntame en comentarios cómo recargas tú!</span>  
+                    <br>
+                    <a href="#">#FrontEnd</a> <a href="#">#Trainee</a> <a href="#">#LearningEveryDay</a> <a href="#">#WebDev</a> <a href="#">#PausaActiva</a> <a href="#">#AprendiendoEnPúblico</a>
+                </p>
+                <img src="images/post/postPic2.png" class="post-img">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like.png" alt="">120</div>
+                        <div><img src="images/comments.png" alt="">45</div>
+                        <div><img src="images/share.png" alt="">20</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/ProfilePic.png"> <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Post 5 -->
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                    <img src="images/ProfilePic.png">
+                        <div>
+                        <p><a href="profile.html" class="toProfile">Cesar Bastidas</a></p>
+                        <span>Julio 27 2025, 15:43</span>
+                        </div>
+                    </div>
+                    <a href=""><i class="fa-solid fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">  
+                <span>🌱 ¡Mi portfolio ya está online!</span>
+                <br><br>  
+                Hecho desde cero con <span>HTML, CSS y JS.</span> Simple, limpio y con mi cara en medio 😅
+                <br>  
+                ¿Me das tu opinión?
+                <br>  
+                <a href="https://personal-folio-nu.vercel.app">🔗 [Entrar aquí]</a>
+                <br>
+                <a href="#">#Trainee</a> <a href="#">#Portfolio</a> <a href="#">#FrontEnd</a></p>
+                <img src="images/post/postPic1.png" class="post-img">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like.png" alt="">120</div>
+                        <div><img src="images/comments.png" alt="">45</div>
+                        <div><img src="images/share.png" alt="">20</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/ProfilePic.png"> <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>   
+
+<div class="footer">
+    <p>Actualizado Octubre 2025 - Cesar Bastidas</p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
