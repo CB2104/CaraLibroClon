@@ -279,18 +279,7 @@ nav{
 .story1{
     background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('images/StoryPic.png');
 }
-.story2{
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('images/jpg-red/Pam B/PamStory.png');
-}
-.story3{
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('images/jpg-red/Tony S/TonyStory.png');
-}
-.story4{
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('images/jpg-red/Anakin/AnakinStory.png');
-}
-.story5{
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('images/jpg-red/Jim/JimStory.jpg');
-}   
+   
 .story.story1 img{
     top: unset;
     left: 50%;
@@ -431,6 +420,11 @@ nav{
     aspect-ratio: 10/16;
     object-fit: cover;
     border-radius: 16px;
+    transition: opacity .25s ease;
+    opacity: 1;
+}
+.stories-full-view .storyy img.fading{
+  opacity: 0;
 }
 .stories-full-view .author{
     position: absolute;
@@ -577,6 +571,10 @@ nav{
     background: transparent;
     border-radius: 4px;
 }
+.load-more-btn:hover{
+    background-color: var(--bg-color);
+}
+
 
 .footer{
     text-align: center;
@@ -905,5 +903,8 @@ nav{
     }
     .info-col, .post-col{
         flex-basis: 100%;
+    }
+    .stories-full-view .storyy img{
+        width: 99%;
     }
 }

@@ -66,18 +66,39 @@ const myStories = [
         fullStory: 'images/jpg-red/Jim/JimStory.jpg',
     },
     {
-        id: 4,
-        author: 'Jim',
-        profileUrl: 'images/jpg-red/Jim/jimhalpert_1.jpg',
-        storiesUrl: "linear-gradient(transparent, rgba(0,0,0,0.5)), url('images/jpg-red/Jim/JimStory.jpg')",
-        fullStory: 'images/jpg-red/Jim/JimStory.jpg',
+        id: 5,
+        author: 'Emmet',
+        profileUrl: 'images/jpg-red/Emmet/EmmPerfil.png',
+        storiesUrl: "linear-gradient(transparent, rgba(0,0,0,0.5)), url('images/jpg-red/Emmet/EmmStory.png')",
+        fullStory: 'images/jpg-red/Emmet/EmmStory.png',
     },
     {
-        id: 4,
-        author: 'Jim',
-        profileUrl: 'images/jpg-red/Jim/jimhalpert_1.jpg',
-        storiesUrl: "linear-gradient(transparent, rgba(0,0,0,0.5)), url('images/jpg-red/Jim/JimStory.jpg')",
-        fullStory: 'images/jpg-red/Jim/JimStory.jpg',
+        id: 6,
+        author: 'Happy',
+        profileUrl: 'images/jpg-red/Happy H/HappPerfil.png',
+        storiesUrl: "linear-gradient(transparent, rgba(0,0,0,0.5)), url('images/jpg-red/Happy H/HappyStory.png')",
+        fullStory: 'images/jpg-red/Happy H/HappyStory.png',
+    },
+    {
+        id: 7,
+        author: 'Marty',
+        profileUrl: 'images/jpg-red/Marty/McflyPerfil.png',
+        storiesUrl: "linear-gradient(transparent, rgba(0,0,0,0.5)), url('images/jpg-red/Marty/MartyStory.png')",
+        fullStory: 'images/jpg-red/Marty/MartyStory.png'
+    },
+    {
+        id: 8,
+        author: 'Michael',
+        profileUrl: 'images/jpg-red/Michael/MichPerfilv1.png',
+        storiesUrl: "linear-gradient(transparent, rgba(0,0,0,0.5)), url('images/jpg-red/Michael/MichStory.png')",
+        fullStory: 'images/jpg-red/Michael/MichStory.png',
+    },
+    {
+        id: 9,
+        author: 'Padme',
+        profileUrl: 'images/jpg-red/Padme/PadmPerfil.png',
+        storiesUrl: "linear-gradient(transparent, rgba(0,0,0,0.5)), url('images/jpg-red/Padme/PadmStory.png')",
+        fullStory: 'images/jpg-red/Padme/PadmStory.png',
     }
 ];
 
@@ -132,10 +153,45 @@ closeBtn.addEventListener('click', () => {
 });
 
 const updateFullView = () => {
-    storyImageFull.src = myStories[actuallyActive].fullStory;
-    storyAuthorFull.textContent = myStories[actuallyActive].author;
-}
+    const story = myStories[actuallyActive];
+    if (!story) return;
 
+    storyImageFull.classList.add('fading');
+
+    const onTransitionEnd = (e) => {
+        if(e.target !== storyImageFull || e.propertyName !== 'opacity') return;
+        storyImageFull.removeEventListener('transitionend', onTransitionEnd);
+        storyImageFull.src = myStories[actuallyActive].fullStory;
+        storyAuthorFull.textContent = myStories[actuallyActive].author;
+
+        const onImgLoad = () => {
+            storyImageFull.removeEventListener('load', onImgLoad);
+            requestAnimationFrame(() => {
+                storyImageFull.classList.remove('fading');
+            })
+        }
+        storyImageFull.addEventListener('transitionend', onTransitionEnd)
+        if(storyImageFull.complete){
+            setTimeout(() =>{
+                storyImageFull.classList.remove('fading');
+            }, 0);
+        }
+    };
+
+    void storyImageFull.offsetWidth;
+
+    storyImageFull.classList.add('fading');
+
+      const fallback = setTimeout(() => {
+        storyImageFull.removeEventListener('transitionend', onTransitionEnd);
+
+    storyImageFull.src = story.fullStory || '';
+    storyAuthorFull.textContent = story.author || '';
+    storyImageFull.classList.remove('fading');
+
+    clearTimeout(fallback);
+  }, 200);
+}
 
 // Left and Right Story
 
@@ -182,6 +238,11 @@ nextBtnFull.addEventListener('click', () => {
     if (actuallyActive >= myStories.length - 1) return
     actuallyActive++;
     updateFullView()
+    if (actuallyActive >= myStories.length){
+        nextBtn.classList.remove('active');
+    } else{
+        nextBtn.classList.add('active');
+    }
 });
 
 previousBtnFull.addEventListener('click', () => {
